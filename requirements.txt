@@ -1,0 +1,5 @@
+flask
+pandas
+ollama
+ollama==0.3.3
+requests==2.32.3
