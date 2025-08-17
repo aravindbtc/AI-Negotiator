@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Negotiator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .chat-box { max-height: 400px; overflow-y: auto; background: #fff; padding: 1rem; border-radius: 8px; }
+        .chat-msg { margin-bottom: 1rem; }
+        .chat-msg.buyer { text-align: right; }
+        .chat-msg.seller { text-align: left; }
+        .chat-msg.system { text-align: center; font-style: italic; color: #6c757d; }
+        .summary-box { background: #e9ecef; padding: 1rem; border-radius: 8px; }
+        .spinner-border { display: none; }
+    </style>
+</head>
+<body>
+<div class="container py-4">
+    <h2 class="mb-4 text-center">🤖 AI Negotiator</h2>
+
+    <form id="negotiationForm" class="row g-3">
+        <div class="col-md-4">
+            <label for="buyerPersona" class="form-label">Buyer Persona</label>
+            <select class="form-select" id="buyerPersona">
+                <option>Diplomatic</option>
+                <option>Assertive</option>
+                <option>Strategic</option>
+                <option>Balanced</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="sellerPersona" class="form-label">Seller Persona</label>
+            <select class="form-select" id="sellerPersona">
+                <option>Analytical</option>
+                <option>Aggressive</option>
+                <option>Collaborative</option>
+                <option>Neutral</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="product" class="form-label">Product</label>
+            <select class="form-select" id="product">
+                {% for p in products %}
+                    <option>{{ p }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary mt-3">Start Negotiation</button>
+            <div class="spinner-border text-primary mt-3" role="status" id="loadingSpinner"></div>
+        </div>
+    </form>
+
+    <hr class="my-4">
+
+    <div class="row">
+        <div class="col-md-7">
+            <h5>📨 Negotiation Transcript</h5>
+            <div class="chat-box" id="chatBox"></div>
+        </div>
+        <div class="col-md-5">
+            <h5>📊 Summary</h5>
+            <div class="summary-box" id="summaryBox">
+                <p><strong>Opening Price:</strong> —</p>
+                <p><strong>Final Price:</strong> —</p>
+                <p><strong>Market Price:</strong> —</p>
+                <p><strong>Margin:</strong> —</p>
+                <p><strong>Margin Type:</strong> —</p>
+                <p><strong>Buyer Persona:</strong> —</p>
+                <p><strong>Seller Persona:</strong> —</p>
+                <p><strong>Total Rounds:</strong> —</p>
+                <p><strong>Regret:</strong> —</p>
+                <p><strong>Walked Away:</strong> —</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById("negotiationForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    document.getElementById("chatBox").innerHTML = "";
+    document.getElementById("summaryBox").innerHTML = "<p>Negotiating...</p>";
+    document.getElementById("loadingSpinner").style.display = "inline-block";
+
+    const data = {
+        buyerPersona: document.getElementById("buyerPersona").value,
+        sellerPersona: document.getElementById("sellerPersona").value,
+        product: document.getElementById("product").value
+    };
+
+    const response = await fetch("/negotiate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await response.json();
+    document.getElementById("loadingSpinner").style.display = "none";
+
+    const chatBox = document.getElementById("chatBox");
+    result.messages.forEach(msg => {
+        const div = document.createElement("div");
+        div.className = `chat-msg ${msg.sender.toLowerCase()}`;
+        div.innerHTML = `<strong>${msg.sender}:</strong> ${msg.text}`;
+        chatBox.appendChild(div);
+    });
+
+    const summary = result.summary;
+    document.getElementById("summaryBox").innerHTML = `
+        <p><strong>Opening Price:</strong> ₹${summary.openingPrice}</p>
+        <p><strong>Final Price:</strong> ₹${summary.finalPrice ?? "—"}</p>
+        <p><strong>Market Price:</strong> ₹${summary.marketPrice}</p>
+        <p><strong>Margin:</strong> ₹${summary.margin}</p>
+        <p><strong>Margin Type:</strong> ${summary.marginType}</p>
+        <p><strong>Buyer Persona:</strong> ${summary.buyerPersona}</p>
+        <p><strong>Seller Persona:</strong> ${summary.sellerPersona}</p>
+        <p><strong>Total Rounds:</strong> ${summary.totalRounds}</p>
+        <p><strong>Regret:</strong> ${summary.regret ? "Yes" : "No"}</p>
+        <p><strong>Walked Away:</strong> ${summary.walkedAway ? "Yes" : "No"}</p>
+    `;
+});
+</script>
+</body>
+</html>

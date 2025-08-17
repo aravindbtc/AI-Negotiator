@@ -1,0 +1,84 @@
+--- Negotiation [2025-08-09 11:02:33] ---
+Product: Mangoes | Variety: N/A
+Origin: Ratnagiri | Season: N/A
+Buyer Persona: Balanced | Seller Persona: Analytical
+Order Size: 100 kg | Base Price: ₹N/A
+Total Rounds: 4
+--------------------------------------------------
+--- Negotiation [2025-08-09 11:13:57] ---
+Product: Mangoes | Variety: N/A
+Origin: Ratnagiri | Season: N/A
+Buyer Persona: Balanced | Seller Persona: Analytical
+Order Size: 100 kg | Base Price: ₹N/A
+Total Rounds: 4
+--------------------------------------------------
+--- Negotiation [2025-08-09 13:25:35] ---
+Product: Mangoes | Variety: N/A
+Origin: Ratnagiri | Season: N/A
+Buyer Persona: Strategic | Seller Persona: Analytical
+Order Size: 100 kg | Base Market Price: ₹18000
+Opening Price: ₹N/A | Final Price: ₹N/A
+Total Rounds: 4
+Margin: ₹N/A (N/A, 0.00%) | Seller Margin: ₹N/A (Profit, 0.00%)
+Walked Away: False | Regret: False
+--------------------------------------------------
+--- Negotiation [2025-08-09 13:35:11] ---
+Product: Mangoes | Variety: N/A
+Origin: Ratnagiri | Season: N/A
+Buyer Persona: Diplomatic | Seller Persona: Analytical
+Order Size: 100 kg | Base Market Price: ₹18000
+Opening Price: ₹N/A | Final Price: ₹N/A
+Total Rounds: 5
+Margin: ₹N/A (N/A, 0.00%) | Seller Margin: ₹N/A (Profit, 0.00%)
+Walked Away: False | Regret: False
+--------------------------------------------------
+--- Negotiation [2025-08-10 09:36:34] ---
+Product: Coffee | Variety: N/A
+Origin: Chikmagalur | Season: N/A
+Buyer Persona: Balanced | Seller Persona: Analytical
+Order Size: 100 kg | Base Market Price: ₹15000
+Opening Price: ₹N/A | Final Price: ₹N/A
+Total Rounds: 5
+Margin: ₹N/A (N/A, 0.00%) | Seller Margin: ₹N/A (Profit, 0.00%)
+Walked Away: False | Regret: False
+--------------------------------------------------
+--- Negotiation [2025-08-12 11:26:44] ---
+Product: Mangoes | Variety: N/A
+Origin: Ratnagiri | Season: N/A
+Buyer Persona: Diplomatic | Seller Persona: Analytical
+Order Size: 100 kg | Base Market Price: ₹18000
+Opening Price: ₹N/A | Final Price: ₹N/A
+Total Rounds: 8
+Margin: ₹N/A (N/A, 0.00%) | Seller Margin: ₹N/A (Profit, 0.00%)
+Walked Away: False | Regret: False
+--------------------------------------------------
+--- Negotiation [2025-08-13 20:36:38] ---
+Product: Mangoes | Variety: N/A
+Origin: Ratnagiri | Season: N/A
+Buyer Persona: Strategic | Seller Persona: Collaborative
+Order Size: 100 kg | Base Market Price: ₹18000
+Opening Price: ₹N/A | Final Price: ₹N/A
+Total Rounds: 6
+Margin: ₹N/A (N/A, 0.00%) | Seller Margin: ₹N/A (Profit, 0.00%)
+Walked Away: False | Regret: False
+--------------------------------------------------
+--- Negotiation [2025-08-13 20:38:55] ---
+Product: Mangoes | Variety: N/A
+Origin: Ratnagiri | Season: N/A
+Buyer Persona: Diplomatic | Seller Persona: Analytical
+Order Size: 100 kg | Base Market Price: ₹18000
+Opening Price: ₹N/A | Final Price: ₹N/A
+Total Rounds: 12
+Margin: ₹N/A (N/A, 0.00%) | Seller Margin: ₹N/A (Profit, 0.00%)
+Walked Away: False | Regret: False
+--------------------------------------------------
+--- Negotiation [2025-08-14 11:39:22] ---
+Product: Mangoes | Variety: N/A
+Origin: Gujarat | Season: N/A
+Buyer Persona: Strategic | Seller Persona: Aggressive
+Order Size: 150 kg | Base Market Price: ₹15000
+Opening Price: ₹N/A | Final Price: ₹N/A
+Total Rounds: 4
+Margin: ₹N/A (N/A, 0.00%) | Seller Margin: ₹N/A (Profit, 0.00%)
+Walked Away: False | Regret: False
+--------------------------------------------------

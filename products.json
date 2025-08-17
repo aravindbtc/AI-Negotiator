@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Alphonso Mangoes",
+        "category": "Mangoes",
+        "quantity": 100,
+        "quality_grade": "A",
+        "origin": "Ratnagiri",
+        "base_market_price": 18000,
+        "attributes": {"ripeness": "optimal", "export_grade": true}
+    },
+    {
+        "name": "Kesar Mangoes",
+        "category": "Mangoes",
+        "quantity": 150,
+        "quality_grade": "B",
+        "origin": "Gujarat",
+        "base_market_price": 15000,
+        "attributes": {"ripeness": "semi-ripe", "export_grade": false}
+    },
+    {
+        "name": "Coffee",
+        "category": "Coffee",
+        "quantity": 100,
+        "quality_grade": "A",
+        "origin": "Chikmagalur",
+        "base_market_price": 15000,
+        "attributes": {"variety": "Arabica", "export_grade": true}
+    },
+    {
+        "name": "Turmeric",
+        "category": "Turmeric",
+        "quantity": 100,
+        "quality_grade": "A",
+        "origin": "Erode",
+        "base_market_price": 9500,
+        "attributes": {"variety": "Salem", "export_grade": false}
+    },
+    {
+        "name": "Cardamom",
+        "category": "Cardamom",
+        "quantity": 50,
+        "quality_grade": "A",
+        "origin": "Idukki",
+        "base_market_price": 27500,
+        "attributes": {"variety": "Green", "export_grade": true}
+    }
+]
